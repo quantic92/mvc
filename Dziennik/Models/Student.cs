@@ -12,24 +12,35 @@ namespace Dziennik.Models
         [Required]
         public int StudentID { get; set; }
         [Required]
+        public string Login { get; set; }
+        [Required]
+        [Display(Name = "Hasło")]
         public string Password { get; set; }
         [Required]
+
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [StringLength(20)]
+        [Display(Name = "Imię")]
         public string Name { get; set; }
         [StringLength(20)]
+        [Display(Name = "Nazwisko")]
         public string LastName { get; set; }
         [DataType(DataType.Date)]
+        [Display(Name = "Data urodzenia")]
         public DateTime DateOfBirthday { get; set; }
         [StringLength(20)]
+        [Display(Name = "Telefon")]
         public string Phone { get; set; }
         [StringLength(20)]
+        [Display(Name = "Telefon komórkowy")]
         public string MobilePhone { get; set; }
         [DataType(DataType.Date)]
+        [Display(Name = "Data utworzenia konta")]
         public DateTime DateOfJoin { get; set; }
         public Boolean Status { get; set; }
         [DataType(DataType.Date)]
+        [Display(Name = "Ostatnio zalogowany")]
         public DateTime LastLoginDate { get; set; }
         public virtual Parent Parent { get; set; }
     }
