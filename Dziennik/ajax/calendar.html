@@ -1,0 +1,44 @@
+<div class="row full-calendar">
+	<div class="col-sm-3">
+		<div id="add-new-event">
+			<h4 class="page-header">Dodaj nowa notatke</h4>
+			<div class="form-group">
+				<label>Nazwa</label>
+				<input type="text" id="new-event-title" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Opis</label>
+				<textarea class="form-control" id="new-event-desc" rows="3"></textarea>
+			</div>
+            <div>
+            <label>Wybierz przedmiot</label>
+            <select>
+                <option value="volvo">NPTO</option>
+                <option value="saab">IO</option>
+                <option value="mercedes">KCK</option>
+                <option value="audi">Grafika Komputerowa</option>
+            </select>
+            </div>
+            <br /><br />
+			<a href="#" id="new-event-add" class="btn btn-primary pull-right">Dodaj notatke</a>
+			<div class="clearfix"></div>
+		</div>
+		<div id="external-events">
+			<h4 class="page-header" id="events-templates-header">Notatki</h4>
+			<div class="external-event">Kolokwium IO</div>
+			<div class="external-event">Wejsciowka NPTO</div>
+			<div class="external-event">Sprawdzian wiedzy z zakresu baz danych</div>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<div id="calendar"></div>
+	</div>
+</div>
+<script>
+$(document).ready(function() {
+	// Set Block Height
+	SetMinBlockHeight($('#calendar'));
+	// Create Calendar
+	DrawFullCalendar();
+});
+</script>

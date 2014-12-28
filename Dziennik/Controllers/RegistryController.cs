@@ -17,6 +17,9 @@ namespace Dziennik.Controllers
         // GET: /Registry/
         public ActionResult Index()
         {
+           
+
+
             return View(db.Students.ToList());
         }
 

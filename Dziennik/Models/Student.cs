@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -26,6 +27,7 @@ namespace Dziennik.Models
         [StringLength(20)]
         [Display(Name = "Nazwisko")]
         public string LastName { get; set; }
+        [Column(TypeName="DateTime2")]
         [DataType(DataType.Date)]
         [Display(Name = "Data urodzenia")]
         public DateTime DateOfBirthday { get; set; }
