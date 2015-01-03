@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace Dziennik.Models
 {
-    public class ExamType
+    public class Course
     {
-        [Required]
-        public int ExamTypeID { get; set; }
+        public int CourseID { get; set; }
+
         public string Name { get; set; }
+
         public string Description { get; set; }
 
-        public virtual ICollection<Exam> Exams { get; set; }
+        public virtual Grade Grade { get; set; }
     }
 }

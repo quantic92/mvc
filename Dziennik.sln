@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dziennik", "Dziennik\Dziennik.csproj", "{0F27386B-B8D5-4C95-97D9-DE2DFBD534CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{BC10AEEA-1F52-4E28-8D4E-458F01C8D277}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0F27386B-B8D5-4C95-97D9-DE2DFBD534CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F27386B-B8D5-4C95-97D9-DE2DFBD534CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F27386B-B8D5-4C95-97D9-DE2DFBD534CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC10AEEA-1F52-4E28-8D4E-458F01C8D277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC10AEEA-1F52-4E28-8D4E-458F01C8D277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC10AEEA-1F52-4E28-8D4E-458F01C8D277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC10AEEA-1F52-4E28-8D4E-458F01C8D277}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
