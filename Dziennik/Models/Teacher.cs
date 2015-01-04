@@ -30,5 +30,6 @@ namespace Dziennik.Models
         public Boolean Status { get; set; }
         [DataType(DataType.Date)]
         public DateTime LastLoginDate { get; set; }
+        public virtual IEnumerable<Course> Courses { get; set; }
     }
 }

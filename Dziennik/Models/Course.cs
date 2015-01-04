@@ -14,5 +14,7 @@ namespace Dziennik.Models
         public string Description { get; set; }
 
         public virtual Grade Grade { get; set; }
+
+        public virtual Teacher Teacher { get; set; }
     }
 }

@@ -11,6 +11,7 @@ namespace Dziennik.Models
         public int Year { get; set; }
         public int ClassTeacherID { get; set; } //Wychowawca
         public virtual ICollection<Grade> Grade { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
 
     }
 }

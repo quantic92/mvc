@@ -45,5 +45,6 @@ namespace Dziennik.Models
         [Display(Name = "Ostatnio zalogowany")]
         public DateTime LastLoginDate { get; set; }
         public virtual Parent Parent { get; set; }
+        public virtual Classroom Classroom { get; set; }
     }
 }

@@ -54,17 +54,14 @@ namespace Dziennik.Services
 
         public List<StudentExamDTO> GetExamsForStudent(int id)
         {
-            throw new InvalidOperationException();
-
-
             using (var db = new DziennikDbContext())
             {
                 var exams = new List<StudentExamDTO>();
                 var ss = new StudentService();
                 var student = ss.GetStudentById(id);
-                var examResults = db.ExamResults.ToList();
-                var allExams = db.Exams.ToList();
-                var examTypes = db.ExamTypes.ToList();
+                var examResults = db.ExamResults;
+                var allExams = db.Exams;
+                var examTypes = db.ExamTypes;
 
                 var examsAsQueryable =
                     from r in examResults
@@ -73,20 +70,26 @@ namespace Dziennik.Services
                     where r.StudentID == id
                     select new
                     {
-                        r.ExamResultID, e.ExamID, t.ExamTypeID
+                        r, e, t
                     };
 
-                var items = examsAsQueryable.ToList();
 
-                //foreach (var exam in examsAsQueryable.ToList())
-                //{
-                //    exams.Add(new StudentExamDTO
-                //    {
-                //        ExamID = exam.ExamID,
-                //        ExamResultID = exam.ExamResultID,
-                //        ExamTypeID = exam.ExamTypeID,
-                //    });
-                //}
+                foreach (var exam in examsAsQueryable.ToList())
+                {
+                    exams.Add(new StudentExamDTO
+                    {
+                        ExamID = exam.e.ExamID,
+                        ExamResultID = exam.r.ExamResultID,
+                        ExamTypeID = exam.t.ExamTypeID,
+                        CourseID = exam.r.CurseID,
+                        Marks = exam.r.Marks,
+                        Name = exam.e.Name,
+                        StartDate = exam.e.StartDate,
+                        StudentID = exam.r.StudentID,
+                        TypeDescription = exam.t.Description,
+                        TypeName = exam.t.Name,
+                    });
+                }
 
                 //var examsList = examResults
                 //    .Join(allExams, r => r.ExamID, e => e.ExamID, (r, e) => new { r, e })
